@@ -10,28 +10,28 @@
     <form action="/register" method="post">
 
         名前（クレジットカード名義,ローマ字）：
-        <input type="text" name="name" th:value="${name}">
+        <input type="text" name="name">
         <br>
-        <span th:text="${nameError}" style="color:red;"></span>
+        <span style="color:red;"></span>
 
         <br>
 
         パスワード（英小文字のみ8～12桁）：
-        <input type="password" name="pass" th:value="${pass}">
+        <input type="password" name="pass">
         <br>
-        <span th:text="${passError}" style="color:red;"></span>
+        <span style="color:red;"></span>
         <br>
 
         クレジットカード番号：
-        <input type="text" name="card" th:value="${card}">
+        <input type="text" name="card">
         <br>
-        <span th:text="${cardError}" style="color:red;"></span>
+        <span style="color:red;"></span>
         <br>
 
         有効期限（MMyy形式）：
-        <input type="text" name="deadline" th:value="${deadline}">
+        <input type="text" name="deadline">
         <br>
-        <span th:text="${deadlineError}" style="color:red;"></span>
+        <span style="color:red;"></span>
         <br>
 
         <input type="submit" value="登録">
