@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>利用者情報登録</title>
+</head>
+<body>
+    <h1>ユーザー登録</h1>
+
+    <form action="/register" method="post">
+
+        名前（クレジットカード名義,ローマ字）：
+        <input type="text" name="name" th:value="${name}">
+        <br>
+        <span th:text="${nameError}" style="color:red;"></span>
+
+        <br>
+
+        パスワード（英小文字のみ8～12桁）：
+        <input type="password" name="pass" th:value="${pass}">
+        <br>
+        <span th:text="${passError}" style="color:red;"></span>
+        <br>
+
+        クレジットカード番号：
+        <input type="text" name="card" th:value="${card}">
+        <br>
+        <span th:text="${cardError}" style="color:red;"></span>
+        <br>
+
+        有効期限（MMyy形式）：
+        <input type="text" name="deadline" th:value="${deadline}">
+        <br>
+        <span th:text="${deadlineError}" style="color:red;"></span>
+        <br>
+
+        <input type="submit" value="登録">
+
+    </form>
+</body>
+</html>
